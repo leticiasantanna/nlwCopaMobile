@@ -8,7 +8,7 @@ import {
 
 import { Loading } from "./src/components/loading";
 import { THEME } from "./src/styles/theme";
-import { SignIn } from "./src/screen/SignIn";
+import { New } from "./src/screen/New";
 
 import { AuthContextProvider } from "./src/contexts/AuthContext";
 
@@ -27,7 +27,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <SignIn /> : <Loading />}
+        {fontsLoaded ? <New /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );

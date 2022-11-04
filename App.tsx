@@ -9,6 +9,7 @@ import {
 import { Loading } from "./src/components/loading";
 import { THEME } from "./src/styles/theme";
 import { New } from "./src/screen/New";
+import { Pools } from "./src/screen/Pools";
 
 import { AuthContextProvider } from "./src/contexts/AuthContext";
 
@@ -27,7 +28,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <New /> : <Loading />}
+        {fontsLoaded ? <Pools /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );

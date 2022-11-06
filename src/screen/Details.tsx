@@ -12,6 +12,7 @@ import { PollCardProps } from "../components/poolCard";
 import { PoolHeader } from "../components/poolHeader";
 import { EmptyMyPoolList } from "../components/emptyMyPoolList";
 import { Option } from "../components/option";
+import { Guesses } from "../components/guesses";
 
 export function Details() {
   const [pollDetails, setPollDetails] = useState<PollCardProps>(
@@ -83,6 +84,7 @@ export function Details() {
                 onPress={() => setOptionClicked("ranking")}
               />
             </HStack>
+            <Guesses poolId={pollDetails.id} />
           </VStack>
         ) : (
           <EmptyMyPoolList code={pollDetails.code} />

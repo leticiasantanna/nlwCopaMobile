@@ -8,7 +8,7 @@ function Button({ title, type = "PRIMARY", ...rest }: IButtonAppProps) {
       h={14}
       rounded="sm"
       textTransform="uppercase"
-      bg={type === "SECONDARY" ? "purple.500" : "purple.900"}
+      bg={type === "SECONDARY" ? "purple.500" : "purple.300"}
       _pressed={{ bg: type === "SECONDARY" ? "purple.600" : "purple.200" }}
       _loading={{
         _spinner: { color: "white" },
@@ -18,7 +18,7 @@ function Button({ title, type = "PRIMARY", ...rest }: IButtonAppProps) {
       <Text
         fontSize="sm"
         fontFamily="heading"
-        color={type === "SECONDARY" ? "white" : "black"}
+        color={type === "SECONDARY" ? "white" : "white"}
       >
         {title}
       </Text>

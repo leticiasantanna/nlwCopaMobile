@@ -3,18 +3,9 @@ import { CaretLeft, Export } from "phosphor-react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { ButtonIcon } from "./../buttonIcon";
+import { IHeaderProps } from "./types";
 
-interface Props {
-  title: string;
-  showBackButton?: boolean;
-  showShareButton?: boolean;
-}
-
-export function Header({
-  title,
-  showBackButton = false,
-  showShareButton = false,
-}: Props) {
+export function Header(props: IHeaderProps) {
   const { navigate } = useNavigation();
   const EmptyBoxSpace = () => <Box w={6} h={6} />;
 
@@ -28,7 +19,7 @@ export function Header({
       px={5}
     >
       <HStack w="full" alignItems="center" justifyContent="space-between">
-        {showBackButton ? (
+        {props.showBackButton ? (
           <ButtonIcon icon={CaretLeft} onPress={() => navigate("pools")} />
         ) : (
           <EmptyBoxSpace />
@@ -40,10 +31,14 @@ export function Header({
           fontSize="md"
           textAlign="center"
         >
-          {title}
+          {props.title}
         </Text>
 
-        {showShareButton ? <ButtonIcon icon={Export} /> : <EmptyBoxSpace />}
+        {props.showShareButton ? (
+          <ButtonIcon icon={Export} onPress={props.onShare} />
+        ) : (
+          <EmptyBoxSpace />
+        )}
       </HStack>
     </HStack>
   );

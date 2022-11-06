@@ -15,7 +15,7 @@ export function EmptyMyPoolList({ code }: Props) {
       <Pressable onPress={() => {}}>
         <Text
           textDecorationLine="underline"
-          color="yellow.500"
+          color="purple.200"
           textDecoration="underline"
         >
           compartilhar o código

@@ -11,7 +11,7 @@ export function Option({ title, isSelected = false, ...rest }: Props) {
       <Center
         h="full"
         w="full"
-        bgColor={isSelected ? "gray.600" : "transparent"}
+        bgColor={isSelected ? "purple.500" : "transparent"}
         rounded="sm"
       >
         <Text color="gray.100" fontFamily="heading" fontSize="xs">

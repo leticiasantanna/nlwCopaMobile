@@ -8,10 +8,10 @@ function Button({ title, type = "PRIMARY", ...rest }: IButtonAppProps) {
       h={14}
       rounded="sm"
       textTransform="uppercase"
-      bg={type === "SECONDARY" ? "purple.500" : "yellow.500"}
-      _pressed={{ bg: type === "SECONDARY" ? "purple.600" : "yellow.600" }}
+      bg={type === "SECONDARY" ? "purple.500" : "purple.900"}
+      _pressed={{ bg: type === "SECONDARY" ? "purple.600" : "purple.200" }}
       _loading={{
-        _spinner: { color: "black" },
+        _spinner: { color: "white" },
       }}
       {...rest}
     >

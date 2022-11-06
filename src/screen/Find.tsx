@@ -7,7 +7,7 @@ import Button from "../components/button";
 export function Find() {
   return (
     <VStack flex={1} bgColor="gray.900">
-      <Header title="Buscar por código" />
+      <Header title="Buscar por código" showBackButton />
 
       <VStack mt={8} mx={5} alignItems="center">
         <Heading
@@ -22,7 +22,7 @@ export function Find() {
 
         <Input marginBottom={2} placeholder="Digite o código do bolão" />
 
-        <Button title="BUSCAR BOLÃO" marginBottom={5} />
+        <Button title="BUSCAR BOLÃO" marginBottom={5} type="SECONDARY" />
       </VStack>
     </VStack>
   );

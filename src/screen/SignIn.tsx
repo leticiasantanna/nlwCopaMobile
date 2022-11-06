@@ -12,7 +12,7 @@ export function SignIn() {
       <Logo width={212} height={40} />
 
       <Button
-        type="SECONDARY"
+        type="PRIMARY"
         title="LOGIN COM"
         rightIcon={<Icon as={Fontisto} name="google" color="white" size="sm" />}
         mt={12}

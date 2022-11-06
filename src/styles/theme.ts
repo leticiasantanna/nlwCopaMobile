@@ -10,7 +10,7 @@ export const THEME = extendTheme({
       300: "#8D8D99",
       200: "#C4C4CC",
     },
-    purple: { 400: "#51518b" },
+    purple: { 200: "#CF9FFF", 400: "#51518b", 500: "#702963", 900: "#301934	" },
     green: {
       500: "#047C3F",
     },
@@ -37,5 +37,7 @@ export const THEME = extendTheme({
   },
   sizes: {
     14: 56,
+    22: 80,
+    26: 87,
   },
 });

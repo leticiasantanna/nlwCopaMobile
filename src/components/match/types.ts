@@ -16,6 +16,7 @@ export interface IGuessProps {
 
 export interface IMatchProps {
   id: string;
+  date: string;
   firstTeamCountryCode: string;
   secondTeamCountryCode: string;
   guess: null | IGuessProps;

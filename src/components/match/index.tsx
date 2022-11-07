@@ -1,12 +1,18 @@
 import { Button, HStack, Text, useTheme, VStack } from "native-base";
 import { X, Check } from "phosphor-react-native";
 import { getName } from "country-list";
+import dayjs from "dayjs";
+import ptBr from "dayjs/locale/pt-br";
 
 import { Team } from "../team";
 import { IProps } from "./types";
 
 export function Match(props: IProps) {
   const { colors, sizes } = useTheme();
+
+  const when = dayjs(props.data.date)
+    .locale(ptBr)
+    .format("DD [de] MMMM [de] YYYY [ás] HH:00[h]");
 
   return (
     <VStack
@@ -19,13 +25,13 @@ export function Match(props: IProps) {
       mb={3}
       p={4}
     >
-      <Text color="gray.100" fontFamily="heading" fontSize="sm">
-        {getName(props.data.firstTeamCountryCode)} vs.{" "}
+      <Text color="purple.200" fontFamily="heading" fontSize="sm">
+        {getName(props.data.firstTeamCountryCode)} {"vs "}
         {getName(props.data.secondTeamCountryCode)}
       </Text>
 
-      <Text color="gray.200" fontSize="xs">
-        22 de Novembro de 2022 às 16:00h
+      <Text color="purple.100" fontSize="xs">
+        {when}
       </Text>
 
       <HStack
